@@ -246,6 +246,49 @@ def calculate_importance(row):
         # In case the actor is not found in the credits
         importance = 0
     return importance
+
+def calculate_direct_neighbors_centrality(graph):
+    centrality_scores = []
+    for vertex in graph.vs:
+        # Identify direct neighbors
+        direct_neighbors = graph.neighbors(vertex.index)
+
+        # Sum the degrees of direct neighbors
+        centrality_score = sum(graph.degree(direct_neighbors))
+        centrality_scores.append(centrality_score)
+
+    return centrality_scores
+
+# Function to add nodes wih max degree based on role and number required
+def add_nodes_by_role(g,role, num_required,):
+    nodes = [node.index for node in g.vs if node['role'] == role]
+    # Sort by degree and add the top nodes
+    sorted_nodes = sorted(nodes, key=lambda idx: g.degree(idx), reverse=True)
+    return sorted_nodes[:num_required]
+
+# Custom aggregation function for geometric mean
+def gmean_series(series):
+    positive_values = series[series > 0]
+    if len(positive_values) > 0:
+        return gmean(positive_values)
+    else:
+        return 0  
+    
+def perform_anova(grouped_data, metric_name):
+    # Perform one-way ANOVA
+    f_statistic, p_value = stats.f_oneway(*[group for name, group in grouped_data[metric_name]])
+
+    print(f"ANOVA for {metric_name}:")
+    print(f"  F-statistic: {f_statistic}, P-value: {p_value}")
+    if p_value < 0.05:
+        print("  There is a significant difference between the communities.")
+    else:
+        print("  There is no significant difference between the communities.")
+    print()
+    
+# Create a function to map ethnicity to region
+def map_ethnicity_to_region(ethnicity):
+    return ethnicity_region_map.get(ethnicity, 'Unknown')
     
 
 
