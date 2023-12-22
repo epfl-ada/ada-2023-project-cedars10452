@@ -87,24 +87,17 @@ Moreover, we delved into investigating whether these shifts in movie topics chos
 ## Proposed Timeline
 
 
+November 20 - November 24, 2023: Investigating the impact of co-starring with high-profile actors on an individual actor's success and the movie's overall performance.
 
-.
-├── 20.11.23: Investigated the impact of co-starring with high-profile actors on an individual actor's success and the movie's overall performance.
-│  
-├── 24.11.23: Analyzed how an actor's ethnicity affects their success and the international reception of their films.
-│  
-├── 29.11.23: Examined the influence of winning or being nominated for major awards on an actor's future roles and overall career success.
-│  
-├── 04.12.23: Assessed how collaboration with acclaimed directors and producers shapes an actor's career.
-│ 
-├── 09.12.23: Identified patterns in the career trajectories of successful actors and how their role choices evolve over time.
-│      
-├── 09.12.23: Start working on the data story.
-│    
-├── 14.12.23: Performed final analysis.
-│  
-├── 22.12.23: Small fixes and submit the project.
-.
+November 25 - November 29, 2023: Analyzing how an actor's ethnicity affects their success and the international reception of their films.
+
+November 30 - December 4, 2023: Examining the influence of winning or being nominated for major awards on an actor's future roles and overall career success.
+
+December 5 - December 9, 2023: Assessing how collaboration with acclaimed directors and producers shapes an actor's career.
+
+December 10 - December 14, 2023: Identifying patterns in the career trajectories of successful actors and how their role choices evolve over time.
+
+December 15 - December 22, 2023: Final Analysis
 
 
 
